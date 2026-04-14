@@ -673,7 +673,6 @@ svg {
     grid-template-columns: 1fr;
   }
 
-  .panel-metrics,
   .skills-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
