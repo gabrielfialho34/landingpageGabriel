@@ -10,8 +10,5 @@
     </linearGradient>
   </defs>
   <rect width="128" height="128" rx="30" fill="url(#bg)" />
-  <path
-    d="M31 95V33h38c17 0 28 9 28 23 0 11-7 18-18 21l19 18H80L63 79H49v16H31zm18-31h18c8 0 12-3 12-9s-4-9-12-9H49v18z"
-    fill="url(#accent)"
-  />
+  <text x="50%" y="52%" dy=".35em" font-family="Arial, sans-serif" font-weight="900" font-size="68" fill="url(#accent)" text-anchor="middle">GF</text>
 </svg>
