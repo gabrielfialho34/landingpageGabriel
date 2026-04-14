@@ -1,0 +1,17 @@
+{
+  "name": "Gabriel Fialho de Carvalho | Portfólio Profissional",
+  "short_name": "Gabriel Fialho",
+  "description": "Portfólio profissional com foco em P&D, Lei do Bem, MCTI e automação de dados.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f3f6fb",
+  "theme_color": "#0d1b2a",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
