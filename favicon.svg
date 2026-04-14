@@ -10,5 +10,5 @@
     </linearGradient>
   </defs>
   <rect width="128" height="128" rx="30" fill="url(#bg)" />
-  <text x="50%" y="52%" dy=".35em" font-family="Arial, sans-serif" font-weight="900" font-size="68" fill="url(#accent)" text-anchor="middle">GF</text>
+  <text x="50%" y="52%" dy=".35em" font-family="Arial, sans-serif" font-weight="900" font-size="68" fill="url(#accent)" text-anchor="middle">GC</text>
 </svg>
