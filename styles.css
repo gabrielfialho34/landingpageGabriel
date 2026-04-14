@@ -592,7 +592,7 @@ svg {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(320px, 0.9fr);
   gap: 1.2rem;
-  align-items: stretch;
+  align-items: start;
 }
 
 .section-intro-left {
