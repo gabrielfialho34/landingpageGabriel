@@ -46,4 +46,33 @@ if (!prefersReducedMotion.matches) {
       });
     });
   });
+
+  // --- Modern UI Reveal Animations ---
+  const revealElements = document.querySelectorAll(
+    '.section-intro, .skill-card, .metric-card, .timeline-item, .education-card, .certifications-card, .panel-card, .hero-copy, .authority-items span'
+  );
+  
+  revealElements.forEach((el, index) => {
+    el.classList.add('reveal');
+    if (el.classList.contains('skill-card')) {
+       el.style.transitionDelay = `${(index % 5) * 100}ms`;
+    } else if (el.classList.contains('metric-card')) {
+       el.style.transitionDelay = `${(index % 3) * 120}ms`;
+    } else if (el.classList.contains('timeline-item')) {
+       el.style.transitionDelay = `${(index % 3) * 150}ms`;
+    } else if (el.tagName.toLowerCase() === 'span') {
+       el.style.transitionDelay = `${(index % 7) * 80}ms`;
+    }
+  });
+
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+
+  revealElements.forEach(el => revealObserver.observe(el));
 }

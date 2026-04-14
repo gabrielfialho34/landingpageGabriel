@@ -793,3 +793,78 @@ svg {
     scroll-behavior: auto !important;
   }
 }
+
+/* --- PREMIUM UI ENHANCEMENTS --- */
+
+/* Smooth Reveal Animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.85s cubic-bezier(0.2, 1, 0.3, 1), transform 0.85s cubic-bezier(0.2, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Card Hover Effects & Depth */
+.skill-card, .metric-card, .panel-card, .education-card, .certifications-card, .timeline-content {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease;
+}
+
+.skill-card:hover, .metric-card:hover, .timeline-content:hover, .education-card:hover, .panel-card:not(.panel-featured):hover {
+  transform: translateY(-8px);
+  box-shadow: 0 22px 44px rgba(13, 27, 42, 0.08);
+  border-color: rgba(42, 111, 186, 0.25);
+}
+
+.skill-icon {
+  transition: transform 0.4s ease, background 0.4s ease;
+}
+
+.skill-card:hover .skill-icon {
+  transform: scale(1.08) rotate(3deg);
+  background: linear-gradient(135deg, rgba(42, 111, 186, 0.25), rgba(13, 27, 42, 0.12));
+}
+
+/* Gorgeous Gradient for Hero Heading */
+.hero h1 {
+  background: linear-gradient(135deg, var(--heading) 20%, var(--accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Dynamic Gradient Background for the Body */
+body {
+  background: 
+    radial-gradient(circle at 10% 40%, rgba(42, 111, 186, 0.06), transparent 30%),
+    radial-gradient(circle at 90% 20%, rgba(13, 27, 42, 0.05), transparent 30%),
+    radial-gradient(circle at 50% 80%, rgba(42, 111, 186, 0.04), transparent 40%),
+    linear-gradient(180deg, #f9fbfe 0%, #eef3f9 100%);
+}
+
+/* Shimmer Effect on Primary Button */
+.button-primary {
+  position: relative;
+  overflow: hidden;
+}
+
+.button-primary::after {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%; width: 50%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  transform: skewX(-20deg);
+  transition: none;
+}
+
+.button-primary:hover::after {
+  animation: shine 0.75s ease forwards;
+}
+
+@keyframes shine {
+  100% { left: 150%; }
+}
