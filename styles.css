@@ -696,6 +696,51 @@ svg {
   color: rgba(255, 255, 255, 0.5);
 }
 
+.section-impact {
+  padding: 3rem 0;
+  background: var(--surface);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  margin-top: -1.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  text-align: center;
+}
+
+.impact-item {
+  padding: 1.5rem;
+}
+
+.impact-value {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--accent);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.impact-suffix {
+  font-size: 1.5rem;
+  margin-left: 0.2rem;
+}
+
+.impact-label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+
 @keyframes ctaPulse {
   0%,
   100% {
