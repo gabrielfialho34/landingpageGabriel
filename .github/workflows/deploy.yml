@@ -33,7 +33,7 @@ jobs:
       - name: Prepare static site artifact
         run: |
           mkdir -p dist
-          cp index.html styles.css script.js favicon.svg robots.txt site.webmanifest .nojekyll dist/
+          cp index.html styles.css script.js favicon.svg robots.txt sitemap.xml site.webmanifest .nojekyll dist/
           cp -R assets dist/assets
 
       - name: Upload static site artifact
