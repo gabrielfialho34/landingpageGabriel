@@ -33,16 +33,17 @@
     <meta name="robots" content="index,follow,max-image-preview:large" />
     <meta name="googlebot" content="index,follow,max-image-preview:large" />
     <meta name="format-detection" content="telephone=no" />
-    <meta name="theme-color" content="#0d1b2a" />
+    <meta name="theme-color" content="#f4f7fa" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0b1520" media="(prefers-color-scheme: dark)" />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="manifest" href="site.webmanifest" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,600;0,8..60,700;1,8..60,600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=2" />
+    <link rel="stylesheet" href="styles.css?v=3" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -100,7 +101,7 @@
           <div class="container hero-grid">
             <div class="hero-copy">
               <span class="eyebrow">Portfólio profissional | Corporate Tech</span>
-              <h1>Eficiência Analítica e Estratégia em P&amp;D: Lei do Bem e Automação de Dados</h1>
+              <h1>Eficiência Analítica e Estratégia em P&amp;D: <em>Lei do Bem e Automação de Dados</em></h1>
               <p class="hero-lead">
                 Especialista em transformar dados complexos em entregas estratégicas para o MCTI,
                 utilizando Power Query, VBA e IA.
@@ -145,29 +146,35 @@
                 </p>
               </div>
 
-              <div class="panel-metrics">
-                <article class="metric-card">
-                  <span class="metric-title">Atuação atual</span>
-                  <strong>P&amp;D na Martinelli Advogados</strong>
-                  <p>Entregas técnicas e analíticas para incentivos à inovação.</p>
-                </article>
-                <article class="metric-card">
-                  <span class="metric-title">Ferramentas-chave</span>
-                  <strong>Power Query, VBA e IA</strong>
-                  <p>Eficiência operacional com confiabilidade de dados.</p>
-                </article>
-                <article class="metric-card">
-                  <span class="metric-title">Base acadêmica</span>
-                  <strong>Administração | PUC Minas</strong>
-                  <p>Visão de negócio aliada à organização e leitura estratégica.</p>
-                </article>
-              </div>
+              <dl class="fact-sheet">
+                <div class="fact-row">
+                  <dt>Atuação atual</dt>
+                  <dd>
+                    <strong>P&amp;D na Martinelli Advogados</strong>
+                    <span>Entregas técnicas e analíticas para incentivos à inovação.</span>
+                  </dd>
+                </div>
+                <div class="fact-row">
+                  <dt>Ferramentas-chave</dt>
+                  <dd>
+                    <strong>Power Query, VBA e IA</strong>
+                    <span>Eficiência operacional com confiabilidade de dados.</span>
+                  </dd>
+                </div>
+                <div class="fact-row">
+                  <dt>Base acadêmica</dt>
+                  <dd>
+                    <strong>Administração | PUC Minas</strong>
+                    <span>Visão de negócio aliada à organização e leitura estratégica.</span>
+                  </dd>
+                </div>
+              </dl>
             </aside>
           </div>
         </section>
 
         <!-- Impact Metrics Banner -->
-        <section class="section-impact">
+        <section class="section-impact" aria-label="Números de atuação">
           <div class="container impact-grid">
             <article class="impact-item">
               <div class="impact-value"><span class="impact-number" data-target="100">100</span><span class="impact-suffix">%</span></div>
@@ -185,14 +192,16 @@
         </section>
 
         <section class="authority-strip" aria-label="Faixa de credibilidade">
-          <div class="container authority-items">
-            <span>PUC Minas</span>
-            <span>Martinelli Advogados</span>
-            <span>Lei do Bem</span>
-            <span>MCTI</span>
-            <span>Power Query</span>
-            <span>VBA</span>
-            <span>IA aplicada à produtividade</span>
+          <div class="container">
+            <ul class="authority-items">
+              <li>PUC Minas</li>
+              <li>Martinelli Advogados</li>
+              <li>Lei do Bem</li>
+              <li>MCTI</li>
+              <li>Power Query</li>
+              <li>VBA</li>
+              <li>IA aplicada à produtividade</li>
+            </ul>
           </div>
         </section>
 
@@ -241,6 +250,7 @@
                 </div>
                 <h3>Lei do Bem &amp; MCTI</h3>
                 <p>Domínio do contexto técnico-documental para incentivos à inovação e entregas aderentes.</p>
+                <span class="skill-tag">Lei nº 11.196/2005</span>
               </article>
 
               <article class="skill-card">
@@ -314,12 +324,9 @@
             <h3 class="timeline-track">Projetos &amp; Consultoria (Freelance)</h3>
             <div class="timeline" aria-label="Linha do tempo de projetos">
               <article class="timeline-item">
-                <div class="timeline-marker"></div>
+                <span class="timeline-date">mar 2026</span>
                 <div class="timeline-content">
-                  <div class="timeline-heading">
-                    <span class="timeline-date">mar 2026</span>
-                    <h3>Apoio Técnico em Apresentações Executivas</h3>
-                  </div>
+                  <h3>Apoio Técnico em Apresentações Executivas</h3>
                   <ul>
                     <li>Apoio na estruturação visual e lógica de deck executivo em PowerPoint voltado ao fechamento de ciclo e reporte de resultados para diretoria.</li>
                     <li>Organização clara e profissional de informações financeiras complexas elaboradas pela consultoria, abrangendo DRE, fluxo de caixa, rentabilidade de BUs e projeções.</li>
@@ -331,12 +338,9 @@
             <h3 class="timeline-track timeline-track-next">Trajetória Corporativa</h3>
             <div class="timeline" aria-label="Linha do tempo corporativa">
               <article class="timeline-item">
-                <div class="timeline-marker"></div>
+                <span class="timeline-date">set 2025 - atual</span>
                 <div class="timeline-content">
-                  <div class="timeline-heading">
-                    <span class="timeline-date">set 2025 - atual</span>
-                    <h3>Estagiário de P&amp;D | Martinelli Advogados</h3>
-                  </div>
+                  <h3>Estagiário de P&amp;D | Martinelli Advogados</h3>
                   <ul>
                     <li>Estrutura cálculos de clientes no contexto da Lei do Bem com consolidação analítica dos dados.</li>
                     <li>Elabora descritivos técnicos de projetos convertendo insumos complexos em textos aderentes ao MCTI.</li>
@@ -346,12 +350,9 @@
               </article>
 
               <article class="timeline-item">
-                <div class="timeline-marker"></div>
+                <span class="timeline-date">set 2024 - ago 2025</span>
                 <div class="timeline-content">
-                  <div class="timeline-heading">
-                    <span class="timeline-date">set 2024 - ago 2025</span>
-                    <h3>Estagiário de Finanças | Thopp Elevadores</h3>
-                  </div>
+                  <h3>Estagiário de Finanças | Thopp Elevadores</h3>
                   <ul>
                     <li>Atuou na regularização de conciliações bancárias com apoio de Excel avançado e automação em Power Query.</li>
                     <li>Organizou alto volume de notas fiscais, boletos e informações para apoio contábil e fechamento financeiro.</li>
@@ -361,12 +362,9 @@
               </article>
 
               <article class="timeline-item">
-                <div class="timeline-marker"></div>
+                <span class="timeline-date">mar 2024 - jun 2024</span>
                 <div class="timeline-content">
-                  <div class="timeline-heading">
-                    <span class="timeline-date">mar 2024 - jun 2024</span>
-                    <h3>Estagiário Administrativo | Tato Assist</h3>
-                  </div>
+                  <h3>Estagiário Administrativo | Tato Assist</h3>
                   <ul>
                     <li>Estruturou controles em planilhas para regularização do fluxo de fechamento de serviços técnicos.</li>
                     <li>Coordenou agenda operacional e comunicação com a equipe técnica para alinhamento das demandas diárias.</li>
@@ -389,7 +387,7 @@
               <article class="education-card">
                 <span class="education-label">Formação acadêmica</span>
                 <h3>Graduação em Administração | PUC Minas</h3>
-                <p>fev 2024 - jul 2027 (previsão)</p>
+                <p class="education-period">fev 2024 - jul 2027 (previsão)</p>
                 <p>
                   Formação orientada à gestão, processos e análise de contexto, complementando a atuação
                   técnica em dados, inovação e eficiência operacional.
@@ -400,9 +398,9 @@
             <article class="certifications-card">
               <span class="education-label">Certificações Microsoft | Fundação Bradesco</span>
               <ul class="certification-list">
-                <li><img src="https://img.icons8.com/color/48/microsoft-excel-2019--v1.png" alt="Excel logo" width="24" height="24" loading="lazy"> Microsoft Excel 2016: Básico, Intermediário e Avançado</li>
-                <li><img src="https://img.icons8.com/color/48/microsoft-word-2019--v2.png" alt="Word logo" width="24" height="24" loading="lazy"> Microsoft Word 2016: Básico, Intermediário e Avançado</li>
-                <li><img src="https://img.icons8.com/color/48/microsoft-powerpoint-2019--v1.png" alt="PowerPoint logo" width="24" height="24" loading="lazy"> Microsoft PowerPoint 2016: Básico e Avançado</li>
+                <li><span class="app-badge app-excel" aria-hidden="true">X</span> Microsoft Excel 2016: Básico, Intermediário e Avançado</li>
+                <li><span class="app-badge app-word" aria-hidden="true">W</span> Microsoft Word 2016: Básico, Intermediário e Avançado</li>
+                <li><span class="app-badge app-powerpoint" aria-hidden="true">P</span> Microsoft PowerPoint 2016: Básico e Avançado</li>
               </ul>
             </article>
           </div>
@@ -418,6 +416,7 @@
               Conecte-se para conversas sobre P&amp;D, Lei do Bem, automação de dados e eficiência em
               entregas estratégicas.
             </p>
+            <p class="footer-email">gabrielfialho34@gmail.com</p>
           </div>
 
           <div class="footer-actions">
@@ -440,11 +439,10 @@
 
         <div class="container footer-bottom">
           <p>© <span id="current-year"></span> Gabriel Fialho de Carvalho. Todos os direitos reservados.</p>
-          <p class="footer-credits">Ícones por <a href="https://icons8.com" target="_blank" rel="noopener noreferrer">Icons8</a></p>
         </div>
       </footer>
     </div>
 
-    <script src="script.js?v=2"></script>
+    <script src="script.js?v=3"></script>
   </body>
 </html>
