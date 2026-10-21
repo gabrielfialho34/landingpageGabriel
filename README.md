@@ -1,31 +1,38 @@
 # Gabriel Fialho de Carvalho | Portfólio Profissional
 
-Landing page estática pronta para publicação em `GitHub Pages`.
+Página de apresentação profissional (site estático, sem servidor nem banco de dados).
 
-## Estrutura
-- `index.html`: conteúdo principal da página
-- `styles.css`: design responsivo no estilo Corporate Tech
-- `script.js`: interações leves
-- `assets/`: currículo para download
-- `.github/workflows/deploy.yml`: publicação automática no GitHub Pages
+- **Site no ar:** https://gabrielfialho34.github.io/landingpageGabriel/
+- **Pasta oficial no PC:** `C:\Projetos\landingpageGabriel`
 
-## Publicação escolhida
-A hospedagem recomendada para este projeto é `GitHub Pages`, por ser gratuita, estável e suficiente para uma landing estática.
+## Arquivos
+- `index.html`: todo o texto da página (experiências, competências, contatos).
+- `styles.css`: cores, fontes e layout.
+- `script.js`: animações (contadores, efeito de aparecer ao rolar, menu).
+- `assets/profile.jpg`: foto de perfil (também usada ao compartilhar o link).
+- `assets/Gabriel_Fialho_de_Carvalho_Curriculo_Word.pdf`: currículo para download.
+- `favicon.svg`, `site.webmanifest`: ícone da aba e atalho no celular.
+- `robots.txt`, `sitemap.xml`: informações para o Google.
+- `.github/workflows/deploy.yml`: publicação automática.
+- `docs/`: relatórios de auditoria.
 
-## Passo mínimo para publicar
-1. Crie um repositório público, de preferência com o nome `gabriel-fialho-portfolio`.
-2. Envie os arquivos desta pasta para esse repositório.
-3. Faça push para a branch `main`.
-4. No GitHub, confirme `Settings > Pages > Build and deployment > Source = GitHub Actions`.
-5. Aguarde o workflow concluir.
+## Como atualizar o site
+1. Faça a alteração numa branch separada e abra um Pull Request.
+2. Ao aprovar (merge) o Pull Request na `main`, o GitHub publica sozinho em cerca de 30 segundos (aba **Actions** > *Deploy portfolio to GitHub Pages*).
+3. Para trocar o currículo, substitua o PDF em `assets/` mantendo o mesmo nome.
+4. Para trocar a foto, use um JPG quadrado de cerca de 1024×1024 px e até ~200 KB, com o nome `assets/profile.jpg`.
+5. Ao mudar o conteúdo, atualize a data `lastmod` em `sitemap.xml`.
 
-## Para indexar no Google
-1. Publique a URL pública.
-2. Abra o Google Search Console.
-3. Solicite indexação da home.
+Se criar um arquivo novo na raiz, inclua-o na linha `cp` de `.github/workflows/deploy.yml`, senão ele não é publicado.
 
-## Próximo ajuste opcional
-Quando a URL pública estiver definida, vale complementar a página com:
-- `canonical`
-- `og:url`
-- `sitemap.xml`
+## Ver no PC antes de publicar
+Abra um terminal na pasta do projeto e rode:
+
+```bash
+python -m http.server 8765
+```
+
+Depois acesse http://localhost:8765 no navegador.
+
+## Google
+O site já tem `canonical`, `sitemap.xml` e tags de compartilhamento. Para pedir indexação, abra o Google Search Console, adicione a URL do site e envie o `sitemap.xml`.
