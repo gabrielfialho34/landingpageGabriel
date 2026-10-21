@@ -696,6 +696,28 @@ svg {
   color: rgba(255, 255, 255, 0.5);
 }
 
+.footer-bottom .footer-credits {
+  margin-top: 0.4rem;
+  font-size: 0.8rem;
+}
+
+.footer-credits a {
+  color: inherit;
+}
+
+.timeline-track {
+  color: var(--accent);
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 800;
+  margin-bottom: 1.2rem;
+}
+
+.timeline-track-next {
+  margin-top: 3rem;
+}
+
 .section-impact {
   padding: 3rem 0;
   background: var(--surface);
