@@ -49,9 +49,9 @@ if (!prefersReducedMotion.matches) {
 
   // --- Modern UI Reveal Animations ---
   const revealElements = document.querySelectorAll(
-    '.section-intro, .skill-card, .metric-card, .timeline-item, .education-card, .certifications-card, .panel-card, .hero-copy, .authority-items span, .impact-item'
+    '.section-intro, .skill-card, .timeline-item, .education-card, .certifications-card, .impact-item'
   );
-  
+
   revealElements.forEach((el, index) => {
     el.classList.add('reveal');
     const numElement = el.querySelector('.impact-number');
@@ -59,13 +59,9 @@ if (!prefersReducedMotion.matches) {
       numElement.textContent = "0";
     }
     if (el.classList.contains('skill-card')) {
-       el.style.transitionDelay = `${(index % 5) * 100}ms`;
-    } else if (el.classList.contains('metric-card') || el.classList.contains('impact-item')) {
-       el.style.transitionDelay = `${(index % 4) * 120}ms`;
-    } else if (el.classList.contains('timeline-item')) {
-       el.style.transitionDelay = `${(index % 3) * 150}ms`;
-    } else if (el.tagName.toLowerCase() === 'span' && !el.classList.contains('impact-number') && !el.classList.contains('impact-suffix')) {
-       el.style.transitionDelay = `${(index % 7) * 80}ms`;
+      el.style.transitionDelay = `${(index % 5) * 80}ms`;
+    } else if (el.classList.contains('impact-item')) {
+      el.style.transitionDelay = `${(index % 3) * 120}ms`;
     }
   });
 
@@ -79,20 +75,16 @@ if (!prefersReducedMotion.matches) {
           numElement.dataset.animated = "true";
           const target = parseInt(numElement.getAttribute('data-target'), 10);
           const duration = 2000;
-          const stepTime = 20;
-          const steps = duration / stepTime;
-          const stepValue = target / steps;
-          let current = 0;
-          
-          const counterInterval = setInterval(() => {
-            current += stepValue;
-            if (current >= target) {
-              numElement.textContent = target;
-              clearInterval(counterInterval);
-            } else {
-              numElement.textContent = Math.floor(current);
+          const start = performance.now();
+
+          const tick = (now) => {
+            const progress = Math.min((now - start) / duration, 1);
+            numElement.textContent = Math.floor(target * progress);
+            if (progress < 1) {
+              requestAnimationFrame(tick);
             }
-          }, stepTime);
+          };
+          requestAnimationFrame(tick);
         }
 
         observer.unobserve(entry.target);
