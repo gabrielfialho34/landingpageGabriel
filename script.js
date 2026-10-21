@@ -54,6 +54,10 @@ if (!prefersReducedMotion.matches) {
   
   revealElements.forEach((el, index) => {
     el.classList.add('reveal');
+    const numElement = el.querySelector('.impact-number');
+    if (numElement) {
+      numElement.textContent = "0";
+    }
     if (el.classList.contains('skill-card')) {
        el.style.transitionDelay = `${(index % 5) * 100}ms`;
     } else if (el.classList.contains('metric-card') || el.classList.contains('impact-item')) {
